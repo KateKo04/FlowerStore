@@ -3,13 +3,13 @@ package org.example;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Setter
 public class Flower {
+    @Getter
     private double sepalLength;
     private FlowerColor color;
+    @Getter
     private double price;
 
-    public Flower(){
-
-    }
+    private FlowerType flowerType;
 }

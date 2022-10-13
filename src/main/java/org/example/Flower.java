@@ -13,4 +13,6 @@ public class Flower {
     private double price;
 
     private FlowerType flowerType;
+
 }
+

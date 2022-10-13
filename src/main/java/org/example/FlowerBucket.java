@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 
 public class FlowerBucket {
-    private static ArrayList<FlowerPack> bucket;
+    private static ArrayList<FlowerPack> bucket = new ArrayList<>();
 
     public void add(FlowerPack flowerPack){
         bucket.add(flowerPack);

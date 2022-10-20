@@ -2,14 +2,27 @@ package org.example;
 
 import java.util.ArrayList;
 
+/**
+ * store of flowers
+ */
+
 public class Store {
 
-    ArrayList<Flower> flowers = new ArrayList<>();
+    /**
+     * initialize store with flowers
+     */
+    ArrayList<Flower> flowers = new ArrayList <>();
 
+    /**
+     * add flowers
+     */
     public void addFlower(Flower flower){
         flowers.add(flower);
     }
 
+    /**
+     * search of flowers
+     */
     public String search(Flower flower){
 
         int counter = 0;
@@ -19,14 +32,18 @@ public class Store {
             if (flower.getClass() != flowerCurrent.getClass() ||
                 flower.getPrice() != flowerCurrent.getPrice() ||
                 flower.getColor() != flowerCurrent.getColor() ||
-                flower.getSepalLength() != flowerCurrent.getSepalLength())
+                flower.getSepalLength() != flowerCurrent.getSepalLength()){
                 continue;
+            }
             else
                 counter++;
         }
         return "There are " + counter + " " + flower.getClass().getSimpleName() + "s";
     }
 
+    /**
+     * just test store of flowers
+     */
     public static void main(String[] args) {
         Store store = new Store();
         store.addFlower(new Rose());

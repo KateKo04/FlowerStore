@@ -1,24 +1,32 @@
 package org.example;
 
-import java.util.ArrayList;
-
+/**
+ * pack of flowers
+ */
 public class FlowerPack {
 
-    private static ArrayList<Flower> flowerPack;
+    /**
+     * flower
+     */
     private Flower flower;
+
+    /**
+     * amount of flowers
+     */
     private int amount;
 
+    /**
+     * initialize pack of flowers
+     */
     public FlowerPack(Flower flower, int amount){
         this.flower = flower;
-        flowerPack.add(flower);
         this.amount = amount;
     }
 
-    public int getPrice(){
-        int sum = 0;
-        for (Flower fl: flowerPack){
-            sum += fl.getPrice();
-        }
-        return sum;
+    /**
+     * get price of flower pack
+     */
+    public double getPrice(){
+        return flower.getPrice() * amount;
     }
 }

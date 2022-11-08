@@ -18,7 +18,7 @@ public class Flower {
     /**
      * Take color of flower
      */
-    private FlowerColor color;
+    private String color;
 
     /**
      * Take price of flower

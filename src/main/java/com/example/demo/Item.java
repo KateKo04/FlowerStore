@@ -1,4 +1,5 @@
 package com.example.demo;
 
-public class Item {
+public abstract class Item {
+    public abstract double getPrice();
 }
